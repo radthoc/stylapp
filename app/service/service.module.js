@@ -1,0 +1,1 @@
+angular.module('service', ['service.user'], ['service.appointmentSlot']);

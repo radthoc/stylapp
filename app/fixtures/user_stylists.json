@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Papy Lafontaine",
+        "role": "stylist",
+        "references": 4
+    },
+    {
+        "id": 2,
+        "name": "Sunshine Logroño",
+        "role": "stylist",
+        "references": 1
+    },
+    {
+        "id": 4,
+        "name": "Activil Modesty",
+        "role": "stylist",
+        "references": 0
+    },
+    {
+        "id": 6,
+        "name": "Poppy Reed",
+        "role": "stylist",
+        "references": 16
+    }
+]

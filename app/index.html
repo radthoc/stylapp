@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" ng-app="stylApp">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/stylistsApp.css"/>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+
+    <script src="stylistsApp.module.js"></script>
+    <script src="stylistsAppController.js"></script>
+    <script src="whoAmI/whoAmI.module.js"></script>
+    <script src="whoAmI/whoAmI.component.js"></script>
+
+    <script src="service/user/user.module.js"></script>
+    <script src="service/user/user.service.js"></script>
+    <script src="service/appointmentSlot/appointmentSlot.module.js"></script>
+    <script src="service/appointmentSlot/appointmentSlot.service.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 header">
+                <who-am-i></who-am-i>
+                <div class="title">
+                    <span>Stylists App</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" ng-controller="StylistsAppController as stylistsController">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Search: <input ng-model="stylistsController.query"/>
+                        </div>
+                        <div class="col-md-3">
+                            Sort by:
+                            <select ng-model="stylistsController.orderProp">
+                                <option value="name">Alphabetical</option>
+                                <option value="-references">More recommended</option>
+                                <option value="references">Less recommended</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <span>Select your stylist:</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <ul>
+                                <li ng-repeat="stylist in stylistsController.stylists | filter:stylistsController.query | orderBy:stylistsController.orderProp">
+                                    <a class="link" ng-click="stylistsController.showSlots(stylist.id)">{{ stylist.name }}</a>
+                                    <p>
+                                        References: {{ stylist.references }}
+                                        <span class="glyphicon glyphicon-star" aria-hidden="true" ng-if="stylist.references > 3"></span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <p>Total number of stylists: {{stylistsController.stylists.length}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div ng-if="stylistsController.stylistSlotsData.slots">
+                        <p>Select the time for your appointment:</p>
+                        <select name="bookingsSlots" multiple size="10">
+                            <option ng-repeat="slot in stylistsController.stylistSlotsData.slots" value="{{ slot.id }}">{{ slot.start }} - {{ slot.end }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
