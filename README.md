@@ -9,7 +9,7 @@ Angular application that allows the user to request an appointment by selecting 
 ## Instruction
 
 - `npm install` to Install the dependencies
-- `npm start` to start the web server and go to http://localhost:8000/index.html in your browser.
+- `npm start` to start the web server in order to be able to run the app locally in your browser with http://localhost:8000/index.html.
 
 ## Tests
 
