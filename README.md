@@ -4,7 +4,7 @@ Still in the oven!
 
 ## Overview
 
-This application allows the user to request an appointment by selecting a stylist and the desired time slot.
+Angular application that allows the user to request an appointment by selecting a stylist and the desired time slot.
 
 ## Instruction
 
