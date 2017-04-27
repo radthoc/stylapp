@@ -35,15 +35,15 @@
                 <div class="col-md-7">
                     <div class="row">
                         <div class="col-md-4">
-                            Search: <input ng-model="stylistsController.query"/>
-                        </div>
-                        <div class="col-md-3">
                             Sort by:
                             <select ng-model="stylistsController.orderProp">
                                 <option value="name">Alphabetical</option>
                                 <option value="-references">More recommended</option>
                                 <option value="references">Less recommended</option>
                             </select>
+                        </div>
+                        <div class="col-md-3">
+                            Search: <input ng-model="stylistsController.query"/>
                         </div>
                     </div>
                     <div class="content-body">
