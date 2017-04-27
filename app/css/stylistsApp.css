@@ -25,10 +25,15 @@ body, html {
     margin-top: 2em;
 }
 
+.content-body {
+    padding: 2em;
+}
+
 select[multiple] {
     width: 80%;
 }
 
-link {
+.link {
+    color: #76D7C4;
     cursor: pointer;
 }
