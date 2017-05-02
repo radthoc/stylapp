@@ -37,3 +37,26 @@ select[multiple] {
     color: #76D7C4;
     cursor: pointer;
 }
+
+.btn {
+    color: white;
+    background-color: #F39C12;
+    border-color: #E67E22;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    outline: 0 !important;
+}
+
+.btn:hover, .btn:focus {
+    color: white;
+    background-color: #E67E22;
+    border-color: #F39C12;
+    text-decoration: none;
+}
+
+.btn:active {
+    color: white;
+    background-color: #CA6F1E !important;
+    border-color: #CA6F1E !important;
+}
