@@ -1,18 +1,14 @@
 angular.
     module('service.user').
-    factory('User', ['$resource',
-        function($resource) {
-            return $resource('fixtures/user_:param.json', {}, {
-                findOne: {
-                    method: 'GET',
-                    params: {param: '@param'},
-                    isArray: false
+    factory('User', ['AjaxService',
+        function(AjaxService) {
+            return {
+                getUser: function(userId) {
+                    return AjaxService.get({ param: 'user_' + userId });
                 },
-                findBy: {
-                    method: 'GET',
-                    params: {param: 'stylists'},
-                    isArray: true
+                getUsersBy: function(param) {
+                    return AjaxService.query({ param: 'users_' + param });
                 }
-            });
+            };
         }
     ]);

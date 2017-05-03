@@ -1,1 +1,1 @@
-angular.module('service.user', ['ngResource']);
+angular.module('service.user', ['service.ajax']);

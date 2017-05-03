@@ -1,1 +1,1 @@
-angular.module('service', ['service.user'], ['service.appointmentSlot']);
+angular.module('service', ['service.user'], ['service.appointmentSlot'], ['service.ajax']);

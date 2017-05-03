@@ -1,1 +1,1 @@
-angular.module('service.appointmentSlot', ['ngResource']);
+angular.module('service.appointmentSlot', ['service.ajax']);

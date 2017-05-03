@@ -1,18 +1,14 @@
 angular.
     module('service.appointmentSlot').
-    factory('AppointmentSlot', ['$resource',
-        function($resource) {
-            return $resource('fixtures/appointment_slot:param.json', {}, {
-                findBy: {
-                    method: 'GET',
-                    params: { param: '@param' },
-                    isArray: false
+    factory('AppointmentSlot', ['AjaxService',
+        function(AjaxService) {
+            return {
+                getSlotsBy: function(stylistId) {
+                    return AjaxService.get({ param: 'appointment_slots_user_' + stylistId });
                 },
-                findOne: {
-                    method: 'GET',
-                    params: { param: '@param' },
-                    isArray: false
+                getSlot: function(slotId) {
+                    return AjaxService.get({ param: 'appointment_slot_' + slotId });
                 }
-            });
+            };
         }
     ]);

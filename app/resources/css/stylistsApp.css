@@ -60,3 +60,7 @@ select[multiple] {
     background-color: #CA6F1E !important;
     border-color: #CA6F1E !important;
 }
+
+.slots-container {
+    background-color: #76D7C4;
+}

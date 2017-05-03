@@ -1,0 +1,1 @@
+angular.module('service.appointment', ['service.ajax']);
