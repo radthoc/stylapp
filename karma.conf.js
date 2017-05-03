@@ -1,15 +1,17 @@
 module.exports = function(config) {
   config.set({
 
-    basePath: './app/tests',
+    basePath: './app',
 
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      '**/*.module.js',
       '*!(.module|.spec).js',
       '!(bower_components)/**/*!(.module|.spec).js',
-      '**/*.spec.js'
+      'components/whoAmI/*.js',
+      'module/*.js',
+      'controller/*.js',
+      'tests/*.test.js'
     ],
 
     autoWatch: true,

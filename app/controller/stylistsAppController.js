@@ -19,7 +19,6 @@ stylistsApp.controller('StylistsAppController', function StylistsAppController(U
 
     self.getSelectedSlotsLabels = function() {
         var selectedSlotsLabels = [];
-        var slot = '';
 
         angular.forEach(self.selectedSlots, function(slotId, key) {
             this.push(AppointmentSlot.getSlot(slotId));
@@ -29,7 +28,6 @@ stylistsApp.controller('StylistsAppController', function StylistsAppController(U
     };
 
     self.sendAppointmentRequest = function() {
-
         var appointment = {
             "customerId": self.customerId,
             "stylistId": self.stylistId,
