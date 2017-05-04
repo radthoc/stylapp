@@ -1,7 +1,18 @@
 describe('controller: stylAppController', function () {
 
-    //beforeEach(module('stylApp'));
+    beforeEach(module('stylApp'));
 
+    var whoAmI;
+
+    beforeEach(function () {
+        whoAmI = {};
+
+        module(function ($provide) {
+            $provide.value('whoAmI', whoAmI);
+        });
+    });
+
+    /*
     beforeEach(function () {
         angular.mock.module('whoAmI', []);
         angular.mock.module('service.user', []);
@@ -10,6 +21,15 @@ describe('controller: stylAppController', function () {
         angular.module('stylApp', [ 'whoAmI', 'service.user', 'service.appointment', 'service.appointmentSlot' ]);
     });
 
+    beforeEach(function(){
+        var whoAmI = {};
+        module('stylApp');
+        module(function ($provide) {
+            $provide.value('whoAmI', whoAmI);
+        });
+    });
+    */
+    
     var $controller;
 
     beforeEach(inject(function (_$controller_) {
