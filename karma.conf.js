@@ -5,11 +5,15 @@ module.exports = function(config) {
 
     files: [
       'bower_components/angular/angular.js',
+      'module/*.js',
+      'controller/*.js',
+      'components/whoAmI/whoAmI.module.js',
+      'service/user/user.module.js',
+      'service/ajax/ajax.module.js',
+      'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-mocks/angular-mocks.js',
       '*!(.module|.spec).js',
       '!(bower_components)/**/*!(.module|.spec).js',
-      'components/whoAmI/*.js',
-      'module/*.js',
       'controller/*.js',
       'tests/*.test.js'
     ],
