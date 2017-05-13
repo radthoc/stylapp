@@ -28,13 +28,13 @@ stylistsApp.controller('StylistsAppController', function StylistsAppController(U
     };
 
     self.sendAppointmentRequest = function() {
-        var appointment = {
+        var appointmentData = {
             "customerId": self.customerId,
             "stylistId": self.stylistId,
             "appointmentSlots": self.selectedSlots,
         };
 
-        if (Appointment.create(appointment)) {
+        if (Appointment.create(appointmentData)) {
             self.formSubmitted = true;
             self.confirmationMsq = "Appointment request sent succesfully. You'll be contacted shortly by our staff";
         };
