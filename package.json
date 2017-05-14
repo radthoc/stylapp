@@ -2,7 +2,7 @@
   "name": "stylapp",
   "private": true,
   "version": "0.0.1",
-  "description": "Stylist appointment",
+  "description": "Stylist appointments",
   "repository": "https://github.com/radthoc/stylapp",
   "devDependencies": {
     "bower": "^1.7.7",

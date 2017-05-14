@@ -22,6 +22,8 @@ module.exports = function(config) {
 
     frameworks: ['jasmine'],
 
+    exclude: ['e2e-tests/*.js'],
+
     browsers: ['Chrome'],
 
     plugins: [
